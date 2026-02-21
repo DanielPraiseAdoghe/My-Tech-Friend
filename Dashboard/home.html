@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Tech-Friend</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/75d8986235.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <div class="logo"> My Tech-Friend</div>
+    <ul>
+        <li>🏠 Home</li>
+        <li>👥 Friends</li>
+        <li>📚 Study Rooms</li>
+        <li>🚀 Projects</li>
+        <li>🏆 Challenges</li>
+        <li>⚙ Settings</li>
+    </ul>
+</div>
+
+<div class="main">
+
+    <div class="navbar">
+        <div class="search">
+            <i class="fa fa-search icon"></i>
+            <input type="text" placeholder="Search friends, tags, rooms...">
+        </div>
+        <div class="user">
+            👤 Alex • Explorer (320 XP)
+        </div>
+    </div>
+   <div class="profile-header">
+
+    <div class="profile-left">
+        <div class="avatar">A</div>
+        <div class="profile-info">
+            <h3>Alex Johnson 🌍</h3>
+            <p>14–17 Mode • Nigeria 🇳🇬</p>
+            <div class="level-badge">🌱 Explorer</div>
+        </div>
+    </div>
+
+    <div class="profile-stats">
+        <div class="xp-section">
+            <span>320 / 500 XP</span>
+            <div class="xp-bar">
+                <div class="xp-fill"></div>
+            </div>
+        </div>
+        <div class="streak">
+            🔥 5 Day Streak
+        </div>
+    </div>
+
+    <button class="edit-btn">Edit Profile</button>
+
+</div>
+    <div class="content">
+        
+        <div class="feed">
+
+            <div class="create-post">
+                <textarea id="postInput" placeholder="Share your idea or start a project..."></textarea>
+                <button onclick="createPost()">Post</button>
+            </div>
+
+            <div id="postContainer">
+
+                <div class="post">
+                    <h4>@Aisha 🌍</h4>
+                    <p>Building a climate awareness mini app. Who wants to collaborate?</p>
+                    <small>#Coding • 2h ago</small>
+                </div>
+
+                <div class="post">
+                    <h4>@Leo 🚀</h4>
+                    <p>Math study room tonight at 6PM GMT!</p>
+                    <small>#StudyRoom • 5h ago</small>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="right-panel">
+
+            <div class="widget">
+                <h4>Your Level</h4>
+                <div class="badge">🌱 Explorer - 320 XP</div>
+            </div>
+
+            <div class="widget">
+                <h4>Trending Tags</h4>
+                <div class="badge">#AI</div>
+                <div class="badge">#GameDev</div>
+                <div class="badge">#Climate</div>
+            </div>
+
+            <div class="widget">
+                <h4>Upcoming Study Rooms</h4>
+                <div class="badge">Intro to Python - Saturday</div>
+                <div class="badge">Science Quiz - Sunday</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function createPost(){
+    const input = document.getElementById("postInput");
+    if(input.value.trim() === "") return;
+
+    const post = document.createElement("div");
+    post.className = "post";
+    post.innerHTML = `
+        <h4>@You 🌍</h4>
+        <p>${input.value}</p>
+        <small>#New • Just now</small>
+    `;
+
+    document.getElementById("postContainer").prepend(post);
+    input.value = "";
+}
+</script>
+
+</body>
+</html>
