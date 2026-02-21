@@ -14,7 +14,8 @@
     <div class="logo"> My Tech-Friend</div>
     <ul>
         <li>🏠 Home</li>
-        <li>👥 Friends</li>
+        <li class="to-chat">👥 Friends</li> 
+        <li class="to-chat"><i class="fa-solid fa-message"></i>Chat</li>
         <li>📚 Study Rooms</li>
         <li>🚀 Projects</li>
         <li>🏆 Challenges</li>
@@ -83,7 +84,7 @@
                 </div>
 
             </div>
-
+                <button class="to-chat" id="down-chat-button">Go to Chat</button>
         </div>
 
         <div class="right-panel">
@@ -128,6 +129,13 @@ function createPost(){
     document.getElementById("postContainer").prepend(post);
     input.value = "";
 }
+
+const chatButtons = document.querySelectorAll(".to-chat");
+chatButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        window.location.href = "../Chat/chat.html";
+    });
+});
 </script>
 
 </body>

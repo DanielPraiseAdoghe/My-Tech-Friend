@@ -49,7 +49,9 @@ body{
     cursor:pointer;
     transition:0.3s;
 }
-
+.sidebar i{
+    margin-right:10px;
+}
 .sidebar li:hover{
     background: var(--light-blue);
 }
@@ -139,7 +141,7 @@ body{
     outline:none;
 }
 
-.create-post button{
+.create-post button, #down-chat-button{
     background: var(--light-blue);
     color:white;
     border:none;
@@ -147,6 +149,19 @@ body{
     border-radius:20px;
     cursor:pointer;
     transition:0.3s;
+}
+#down-chat-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 1rem;
+    padding: 10px 15px;
+    &:hover{
+        background-color: var(--light-blue);
+        box-shadow: 0 0 10px var(--light-blue);
+        transform: translateY(-2px);
+    }
 }
 
 .create-post button:hover{
