@@ -161,3 +161,25 @@ hr{
     }
 }
 
+/* RESPONSIVE */
+/* @media (max-width: 768px){
+    .body-container{
+        display: flex;
+        gap:10px;
+        flex-direction: column;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    .container{
+        width: 100%;
+    }
+    .illust-container{
+        display: none;
+        padding: 2rem;
+        h1{
+            display: none;
+            margin-top: -5rem;
+            font-size:1.5rem;
+        }
+    }
+} */
